@@ -2,5 +2,15 @@ name: DrawMyThing
 author: mjl1010
 description: Plugin of DrawMyThing
 website: http://papocraft.com
-main: com.leonor13.papodraw.DrawMyThing
+main: com.skimdoo.AnbuDraw.DrawMyThing
 version: 1.0
+commands:
+  dmt:
+    description: Comando que gestiona el plugin.
+permissions:
+  dmt.admin:
+    description: Poder absoluto.
+    default: op
+  dmt.default:
+    description: Poder entrar a las arenas.
+    default: true
