@@ -1,0 +1,6 @@
+name: DrawMyThing
+author: mjl1010
+description: Plugin of DrawMyThing
+website: http://papocraft.com
+main: com.leonor13.papodraw.DrawMyThing
+version: 1.0
