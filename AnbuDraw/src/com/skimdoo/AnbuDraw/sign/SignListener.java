@@ -26,7 +26,7 @@ public class SignListener implements Listener {
 	  
 	@EventHandler
 	public void onBlockPlaced(SignChangeEvent Event) {
-	    if (Event.getLine(0).startsWith("[anbu entrar]")) {
+	    if (Event.getLine(0).startsWith("[anbuentrar]")) {
 	    	if ((Event.getLine(1).length() > 0) && (Event.getPlayer().hasPermission("dmt.admin"))) {
 	    		String line2 = Event.getLine(1);
 	    		if (Event.getBlock().getType() == Material.WALL_SIGN) {
@@ -42,7 +42,7 @@ public class SignListener implements Listener {
 	    			}
 	    		}
 	    	}
-	    } else if ((Event.getLine(0).startsWith("[anbu salir]")) && (Event.getPlayer().hasPermission("dmt.admin"))) {
+	    } else if ((Event.getLine(0).startsWith("[anbusalir]")) && (Event.getPlayer().hasPermission("dmt.admin"))) {
 	    	Event.setLine(0, ChatColor.BLUE + "[ANBU DRAW]");
 	    	Event.setLine(1, "");
 	    	Event.setLine(2, ChatColor.RED + "¡Salir!");
@@ -78,7 +78,7 @@ public class SignListener implements Listener {
 					if ((this.plugin.getGameByName(game) != null) && (player.hasPermission("dmt.default"))) {
 						this.plugin.getGameByName(game).join(player);
 					}
-				} else if ((sign.getLine(0).equals(ChatColor.GOLD + "[DMT]")) && (sign.getLine(1).equals(ChatColor.RED + "Leave"))) {
+				} else if ((sign.getLine(0).equals(ChatColor.BLUE + "[ANBU DRAW]")) && (sign.getLine(2).equals(ChatColor.RED + "¡Salir!"))) {
 					if ((player.hasPermission("dmt.default")) && (player.hasMetadata("inbmt")) && (this.plugin.getGameByName(((MetadataValue)player.getMetadata("inbmt").get(0)).asString()) != null)) {
 						this.plugin.getGameByName(((MetadataValue)player.getMetadata("inbmt").get(0)).asString()).leave(player);
 					}

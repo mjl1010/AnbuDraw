@@ -1,11 +1,11 @@
-name: DrawMyThing
+name: ANBU DRAW
 author: mjl1010
 description: Plugin of DrawMyThing
 website: http://papocraft.com
 main: com.skimdoo.AnbuDraw.DrawMyThing
 version: 1.0
 commands:
-  dmt:
+  ad:
     description: Comando que gestiona el plugin.
 permissions:
   dmt.admin:

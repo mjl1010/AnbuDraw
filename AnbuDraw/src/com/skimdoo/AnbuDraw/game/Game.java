@@ -78,7 +78,7 @@ public class Game implements Listener {
   		em.setDisplayName(ChatColor.RED + "Borrador");
   		this.eraser.setItemMeta(em);
     
-  		this.colorpicker = new ItemStack(Material.COMPASS);
+  		this.colorpicker = new ItemStack(Material.BAKED_POTATO);
   		ItemMeta ccm = this.colorpicker.getItemMeta();
   		ccm.setDisplayName(ChatColor.GOLD + "Paleta de Colores");
   		this.colorpicker.setItemMeta(ccm);
@@ -301,7 +301,7 @@ public class Game implements Listener {
     	p.getInventory().addItem(new ItemStack[] { this.pencil });
     	p.getInventory().addItem(new ItemStack[] { this.eraser });
     	p.getInventory().addItem(new ItemStack[] { this.colorpicker });
-    	p.setDisplayName(ChatColor.RED + "[BUILDER] " + p.getName());
+    	p.setDisplayName(ChatColor.RED + "[PINTOR] " + p.getName());
     	sendMessage("§9¡Ahora le toca a §f" + p.getName() + " §9dibujar!");
     	Utilidades.send(p, ChatColor.GOLD + "¡Atención! " + ChatColor.BOLD + "La palabra es: §f§l" + this.word);
  	}

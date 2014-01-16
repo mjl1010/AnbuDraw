@@ -72,7 +72,7 @@ public class GameListener implements Listener {
 	    if (event.getPlayer().getItemInHand() == null) {
 	      return;
 	    }
-	    if (event.getPlayer().getItemInHand().getItemMeta().getDisplayName().contains("Pencil"))
+	    if (event.getPlayer().getItemInHand().getItemMeta().getDisplayName().contains("Pincel"))
 	    {
 	      if ((event.getAction() != Action.RIGHT_CLICK_BLOCK) && (event.getAction() != Action.RIGHT_CLICK_AIR)) {
 	        return;
@@ -85,7 +85,7 @@ public class GameListener implements Listener {
 	      b.setTypeIdAndData(Material.WOOL.getId(), this.color.getData(), true);
 	      return;
 	    }
-	    if (event.getPlayer().getItemInHand().getItemMeta().getDisplayName().contains("Eraser"))
+	    if (event.getPlayer().getItemInHand().getItemMeta().getDisplayName().contains("Borrador"))
 	    {
 	      if ((event.getAction() != Action.RIGHT_CLICK_AIR) && (event.getAction() != Action.RIGHT_CLICK_BLOCK)) {
 	        return;
@@ -98,7 +98,7 @@ public class GameListener implements Listener {
 	      b.setTypeIdAndData(Material.WOOL.getId(), DyeColor.WHITE.getData(), true);
 	      return;
 	    }
-	    if (event.getPlayer().getItemInHand().getType() == Material.COMPASS)
+	    if (event.getPlayer().getItemInHand().getType() == Material.BAKED_POTATO)
 	    {
 	      if ((event.getAction() != Action.RIGHT_CLICK_AIR) && (event.getAction() != Action.RIGHT_CLICK_BLOCK)) {
 	        return;
@@ -116,7 +116,7 @@ public class GameListener implements Listener {
 	    if ((event.getPlayer().hasMetadata("inbmt")) && 
 	      (!event.getMessage().startsWith("/dmt")))
 	    {
-	    	Utilidades.send(event.getPlayer(), ChatColor.RED + "You cannot execute commands while ingame!");
+	    	Utilidades.send(event.getPlayer(), ChatColor.RED + "¡No puedes usar comandos mientras juegas!");
 	      event.setCancelled(true);
 	    }
 	  }
@@ -165,7 +165,7 @@ public class GameListener implements Listener {
 	      (this.instance.getGameByName(((MetadataValue)event.getPlayer().getMetadata("inbmt").get(0)).asString()).isStarted())) {
 	      if (this.instance.getGameByName(((MetadataValue)event.getPlayer().getMetadata("inbmt").get(0)).asString()).getBuilder().getName() == event.getPlayer().getName())
 	      {
-	    	  Utilidades.send(event.getPlayer(), ChatColor.RED + "You cannot chat while you are a builder!");
+	    	  Utilidades.send(event.getPlayer(), ChatColor.RED + "¡No puedes hablar por el chat debido a que estas pintando!");
 	        event.setCancelled(true);
 	      }
 	      else
@@ -173,7 +173,7 @@ public class GameListener implements Listener {
 	        event.setCancelled(true);
 	        String word = this.instance.getGameByName(((MetadataValue)event.getPlayer().getMetadata("inbmt").get(0)).asString()).getWord();
 	        if (this.instance.getGameByName(((MetadataValue)event.getPlayer().getMetadata("inbmt").get(0)).asString()).hasFound(event.getPlayer())) {
-	          Utilidades.send(event.getPlayer(), ChatColor.RED + "You have already found the word!");
+	          Utilidades.send(event.getPlayer(), ChatColor.RED + "¡Ya has encontrado la palabra, felicidades!");
 	        } else if (event.getMessage().toLowerCase().contains(word)) {
 	          this.instance.getGameByName(((MetadataValue)event.getPlayer().getMetadata("inbmt").get(0)).asString()).wordFoundBy(event.getPlayer());
 	        } else {
@@ -189,7 +189,7 @@ public class GameListener implements Listener {
 	    if (event.getPlayer().hasMetadata("inbmt")) {
 	      if (this.instance.getGameByName(((MetadataValue)event.getPlayer().getMetadata("inbmt").get(0)).asString()) != null) {
 	        if (this.instance.getGameByName(((MetadataValue)event.getPlayer().getMetadata("inbmt").get(0)).asString()).isStarted()) {
-	          if (event.getPlayer().getDisplayName().contains("[BUILDER]"))
+	          if (event.getPlayer().getDisplayName().contains("[PINTOR]"))
 	          {
 	            if ((event.getTo().getX() == event.getFrom().getX()) && (event.getTo().getY() == event.getFrom().getY()) && (event.getTo().getZ() == event.getFrom().getZ())) {
 	              return;
@@ -211,63 +211,63 @@ public class GameListener implements Listener {
 	        if ((event.getCurrentItem() == null) || (event.getCurrentItem().getType() == Material.AIR)) {
 	          return;
 	        }
-	        if (event.getCurrentItem().getItemMeta().getDisplayName().contains("White"))
+	        if (event.getCurrentItem().getItemMeta().getDisplayName().contains("Blanco"))
 	        {
 	          setPencilColor(DyeColor.WHITE);
 	          p.playSound(p.getLocation(), Sound.ORB_PICKUP, 1.0F, 1.0F);
 	          p.closeInventory();
 	          return;
 	        }
-	        if (event.getCurrentItem().getItemMeta().getDisplayName().contains("Black"))
+	        if (event.getCurrentItem().getItemMeta().getDisplayName().contains("Negro"))
 	        {
 	          setPencilColor(DyeColor.BLACK);
 	          p.playSound(p.getLocation(), Sound.ORB_PICKUP, 1.0F, 1.0F);
 	          p.closeInventory();
 	          return;
 	        }
-	        if (event.getCurrentItem().getItemMeta().getDisplayName().contains("Red"))
+	        if (event.getCurrentItem().getItemMeta().getDisplayName().contains("Rojo"))
 	        {
 	          setPencilColor(DyeColor.RED);
 	          p.playSound(p.getLocation(), Sound.ORB_PICKUP, 1.0F, 1.0F);
 	          p.closeInventory();
 	          return;
 	        }
-	        if (event.getCurrentItem().getItemMeta().getDisplayName().contains("Orange"))
+	        if (event.getCurrentItem().getItemMeta().getDisplayName().contains("Naranja"))
 	        {
 	          setPencilColor(DyeColor.ORANGE);
 	          p.playSound(p.getLocation(), Sound.ORB_PICKUP, 1.0F, 1.0F);
 	          p.closeInventory();
 	          return;
 	        }
-	        if (event.getCurrentItem().getItemMeta().getDisplayName().contains("Yellow"))
+	        if (event.getCurrentItem().getItemMeta().getDisplayName().contains("Amarillo"))
 	        {
 	          setPencilColor(DyeColor.YELLOW);
 	          p.playSound(p.getLocation(), Sound.ORB_PICKUP, 1.0F, 1.0F);
 	          p.closeInventory();
 	          return;
 	        }
-	        if (event.getCurrentItem().getItemMeta().getDisplayName().contains("Green"))
+	        if (event.getCurrentItem().getItemMeta().getDisplayName().contains("Verde"))
 	        {
 	          setPencilColor(DyeColor.LIME);
 	          p.playSound(p.getLocation(), Sound.ORB_PICKUP, 1.0F, 1.0F);
 	          p.closeInventory();
 	          return;
 	        }
-	        if (event.getCurrentItem().getItemMeta().getDisplayName().contains("Blue"))
+	        if (event.getCurrentItem().getItemMeta().getDisplayName().contains("Azul"))
 	        {
 	          setPencilColor(DyeColor.LIGHT_BLUE);
 	          p.playSound(p.getLocation(), Sound.ORB_PICKUP, 1.0F, 1.0F);
 	          p.closeInventory();
 	          return;
 	        }
-	        if (event.getCurrentItem().getItemMeta().getDisplayName().contains("Purple"))
+	        if (event.getCurrentItem().getItemMeta().getDisplayName().contains("Violeta"))
 	        {
 	          setPencilColor(DyeColor.PURPLE);
 	          p.playSound(p.getLocation(), Sound.ORB_PICKUP, 1.0F, 1.0F);
 	          p.closeInventory();
 	          return;
 	        }
-	        if (event.getCurrentItem().getItemMeta().getDisplayName().contains("Brown"))
+	        if (event.getCurrentItem().getItemMeta().getDisplayName().contains("Marrón"))
 	        {
 	          setPencilColor(DyeColor.BROWN);
 	          p.playSound(p.getLocation(), Sound.ORB_PICKUP, 1.0F, 1.0F);
