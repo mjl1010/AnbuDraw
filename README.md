@@ -17,6 +17,4 @@ Pon un cartel con [anbuentrar] y en la segunda linea el nombre de la arena y se 
 
 **Próximamente:**
 * Aparecerá en la socreboard la palabra a dibujar.
-* Más... :smile:
-
-_Markdown creado por propósitos propios y educativos._
+* Más... :smile:_
