@@ -1,8 +1,7 @@
-AnbuDraw Plugin v1.0
-========
-DrawMyThing en español, ahora mismo en desarrollo, y se puede considerar que es estable.
-
-Comandos:
+# AnbuDraw Plugin v1.0
+DrawMyThing en español, ahora mismo en desarrollo, y se puede considerar que es _estable_.
+___
+**Comandos:**
 - /ad help
 - /ad papel1
 - /ad papel2
@@ -13,9 +12,9 @@ Comandos:
 - /ad setmax [arena] [num]
 - /ad setmin [arena] [num]
 
-Extras:
+**Extras:**
 Pon un cartel con [anbuentrar] y en la segunda linea el nombre de la arena y se generará un cartel para entrar en dicha arena. Poniendo [anbusalir] creas un cartel para salir de cualquier arena.
 
-Próximamente:
+**Próximamente:**
 * Aparecerá en la socreboard la palabra a dibujar.
-* Más...
+* Más... :smile:
